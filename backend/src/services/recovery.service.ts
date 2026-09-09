@@ -5,8 +5,6 @@ import { env } from "../config/env.js";
 export const recoverScheduledEmails = async () => {
   console.log("Starting email recovery...");
 
-  // Any PROCESSING email from a previous worker instance
-  // may have been interrupted. Put it back into SCHEDULED.
 const stuckThreshold = new Date(
   Date.now() - 5 * 60 * 1000
 );
